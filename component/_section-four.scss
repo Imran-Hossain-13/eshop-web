@@ -1,0 +1,43 @@
+.section-four{
+    background-color: $color;
+    height: 440px;
+    margin-top: 100px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    .eshop-text{
+        p{
+            font-weight: 500;
+            width: 100%;
+            text-align: center;
+        }
+        .license{
+            margin-bottom: 40px;
+        }
+        h1{
+            width: 100%;
+            text-align: center;
+            margin: 14px 0;
+            // display: flex;
+            // justify-content: center;
+        }
+        div{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            .purchase{
+                text-decoration: none;
+                color: black;
+                font-weight: 400;
+                padding: 10px 20px;
+                background-color: white;
+                box-shadow: 0 0 3px 3px rgb(241, 185, 185);
+                &:hover{
+                    box-shadow: 0 0 3px 3px rgb(216, 43, 43);
+                    transition: 1s;
+                }
+            }
+        }
+    }
+}

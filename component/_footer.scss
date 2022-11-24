@@ -1,0 +1,100 @@
+footer{
+    display: none;
+    background-color: rgb(31, 31, 31);
+    padding-top: 70px;
+    padding-bottom: 10px;
+    color: white;
+    overflow: hidden;
+    .fotter-boxes{
+        display: flex;
+        justify-content: center;
+        .fotter-boxes-div{
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4,290px);
+            .footer-box{
+                display: inline-block;
+                h4{
+                    display: inline-block;
+                }
+                img{
+                    margin-bottom: 9px;
+                }
+                .footer-ul{
+                    text-align: start;
+                    li{
+                        margin-left: -30px;
+                        list-style-type: none;
+                        padding: 3px 0;
+                        a{
+                            text-decoration: none;
+                            color: white;
+                        }
+                        &:hover{
+                            transform: translateX(6px);
+                            transition: 0.3s;
+                            a{
+                                transition: 0.3s;
+                                color: $color;
+                            }
+                        }
+                    }
+                }
+                span{
+                    i{
+                        font-size: 22px;
+                        padding: 0 7px;
+                    }
+                }
+            }
+        }
+    }
+    .all-payment{
+        .payment-box{
+            padding: 0 10px;
+            .my-class{
+                span{
+                    margin-left: 490px !important;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1185px){
+    footer{
+        .fotter-boxes{
+            .fotter-boxes-div{
+                grid-template-columns: repeat(2,1fr);
+                padding: 0 20px;
+                column-gap: 20px;
+                row-gap: 50px;
+            }
+        }
+        .all-payment{
+            .payment-box{
+                width: 100%;
+                .my-class{
+                    width: 100%;
+                    span{
+                        margin-left: 0 !important;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 650px){
+    footer{
+        .fotter-boxes{
+            .fotter-boxes-div{
+                grid-template-columns: repeat(1,1fr);
+            }
+        }
+        .payment-box{
+            .my-class{
+                display: block !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,95 @@
+.section-six{
+    display: none;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    .all-item{
+        .d-flex{
+            .blog-div{
+                margin-bottom: 30px;
+                p{
+                    width: 50px;
+                    margin-left: 50px;
+                    border-top: 3px solid $color;
+                }
+            }
+        }
+        .blog-boxes{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            column-gap: 20px;
+            .blog-box{
+                width: 95%;
+                img{
+                    width: 100%;
+                }
+                .text-area{
+                    text-align: center;
+                    margin-bottom: 30px;
+                    p{
+                        color: rgb(157, 156, 156);
+                        margin: 0;
+                        margin-top: 35px;
+                    }
+                    h5{
+                        margin: 5px 0;
+                        &:hover{
+                            color: $color;
+                            transition: 0.5s;
+                        }
+                    }
+                    a{
+                        text-decoration: none;
+                        color: black; 
+                        &:hover{
+                            color: $color;
+                            transition: 0.5s;
+                        }
+                    }
+                }
+                &:hover{
+                    box-shadow: 0 12px 20px -6px #e0e0e0;
+                    transition: 0.6s;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1180px){
+    .section-six{
+        padding: 20px;
+        .all-item{
+            .blog-boxes{
+                column-gap: 10px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 770px){
+    .section-six{
+        .all-item{
+            .blog-boxes{
+                grid-template-columns: repeat(2,1fr);
+                row-gap: 18px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 570px){
+    .section-six{
+        padding: 0;
+        .all-item{
+            padding: 0 30px;
+            width: 100%;
+            .blog-boxes{
+                grid-template-columns: repeat(1,1fr);
+                .blog-box{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

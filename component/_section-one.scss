@@ -1,0 +1,66 @@
+.section-one{
+    background-image: url(./Image/one-man-image.jpg);
+    height: 506px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    // display: flex;
+    display: none;
+    justify-content: center;
+    padding-right: 90px;
+    .text-box{
+        margin-left: -130px;
+        width: 350px;
+        transform: translateY(120px);
+        h5{
+            font-size: 22px;
+            font-weight: bold;
+        }
+        h2{
+            font-size: 50px;
+            color: $color;
+        }
+        p{
+            font-weight: 400;
+        }
+        a{
+            button{
+                border: none;
+                transform: translateY(10px);
+                color: white;
+                background-color: rgb(44, 44, 44);
+                padding: 9px 30px;
+                &:hover{
+                    background-color: $color;
+                    transition: 0.4s;
+                    // box-shadow: 0 0 4px 4px rgb(206, 206, 206);
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1140px){
+    .section-one{
+        .text-box{
+            margin-left: 10px;
+        }
+    }
+}
+
+@media only screen and (max-width: 990px){
+    .section-one{
+        justify-content: start;
+        height: 400px;
+        .text-box{
+            margin-left: 40px !important;
+            transform: translateY(70px);
+            h5{
+                font-size: 22px;
+            }
+            h2{
+                font-size: 40px;
+            }
+        }
+    }
+}

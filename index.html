@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="eshop.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <!-- <link rel="icon" type="image/x-icon" href="./assets/icon.ico"> -->
+    <script src="https://kit.fontawesome.com/bca3ec24e7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="spinner-div">
+        <span id="spinner" class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </span>
+    </div>
+
+    <header id="header">
+        <div class="header-top">
+            <div class="first-bar">
+                <span class="d-flex">
+                    <i class="fa-solid fa-headphones"></i>
+                    <p class="different"> +060 (800) 801-582</p>
+                </span>
+                <span class="d-flex">
+                    <i class="fa-regular fa-envelope"></i>
+                    <p> support@shophub.com</p>
+                </span>
+            </div>
+
+            <div class="d-flex second-bar">
+                <span class="d-flex span-box ">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p class="diff border-end">Store location</p>
+                </span>
+                <span class="d-flex span-box">
+                    <i class="fa-solid fa-stopwatch"></i>
+                    <a href="#">
+                        <p class="border-end">Daily Deal</p>
+                    </a>
+                </span>
+                <span class="d-flex span-box">
+                    <i class="fa-solid fa-user-tie"></i>
+                    <a href="#">
+                        <p class="border-end">My account</p>
+                    </a>
+                </span>
+                <span class="d-flex span-box">
+                    <i class="fa-solid fa-user-lock"></i>
+                    <a href="#">
+                        <p>Login</p>
+                    </a>
+                </span>
+            </div>
+        </div>
+
+        <div class="header-menu-searchBox-one">
+            <div class="image-div">
+                <a href="#">
+                    <img src="Image/eshop_logo.png" alt="">
+                </a>
+            </div>
+
+            <div class="search-box">
+                <div class="input-group">
+                    <div class="input-group-text">
+                        <div class="dropdown">
+                            <a class="catagory" href="#" data-bs-toggle="dropdown">
+                                All Category<i class="fa-solid fa-chevron-down"></i>
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">All Category</a></li>
+                                <li><a class="dropdown-item" href="#">Watch</a></li>
+                                <li><a class="dropdown-item" href="#">Mobile</a></li>
+                                <li><a class="dropdown-item" href="#">Kid's Item</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <input type="text" id="form-control-input" class="form-control"
+                        placeholder="Search Products Here....." onclick="inputChange()">
+
+                    <span class="input-group-text icon-text-input"><i class="fa-solid fa-magnifying-glass"></i></span>
+                </div>
+            </div>
+
+            <div class="icon-div" id="icon-box">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-circle-user"></i>
+                <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
+                <p id="cart-number">0</p>
+                <div class="header-cart-box" id="myDiv">
+                    <div class="header">
+                        <span>
+                            <p id="cart-number2">0</p>
+                            <p>ITEM</p>
+                        </span>
+                        <p>VIEW ITEM</p>
+                    </div>
+
+                    <div id="add-cart">
+
+                    </div>
+
+                    <div class="footer">
+                        <p>TOTAL</p>
+                        <span>$<p id="total-price">0</p></span>
+                    </div>
+                    <button class="checkout-btn">CHECK OUT</button>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div class="header-menu-searchBox-another">
+            <div class="logo-div-two">
+                <a href="#">
+                    <img src="Image/eshop_logo.png" alt="">
+                </a>
+            </div>
+
+            <div class="search-div-two">
+                <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+                <div class="input-group" id="input-div-two">
+                    <input type="text" class="form-control" aria-describedby="basic-addon2">
+                    <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+                </div>
+
+                <a class="three-bar" data-bs-toggle="collapse" href="#multiCollapseExample1">
+                    <i class="fa-solid fa-bars" id="three-bar"></i>
+                </a>
+                <div class="collapse multi-collapse" id="multiCollapseExample1">
+                    <ul class="offcanvas-ul">
+                        <a href="#">
+                            <li>Home</li>
+                        </a>
+
+                        <a href="#">
+                            <li>Product</li>
+                        </a>
+
+                        <a href="#">
+                            <li>Service</li>
+                        </a>
+
+                        <div class="btn-group dropend">
+                            <li class="dropdown-toggle" data-bs-toggle="dropdown">Shop</li>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Cart</a></li>
+                                <li><a href="#">Checkout</a></li>
+                            </ul>
+                        </div>
+
+                        <a href="#">
+                            <li>Pages</li>
+                        </a>
+
+                        <div class="btn-group dropend">
+                            <li class="dropdown-toggle" data-bs-toggle="dropdown">BLog</li>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Blog Single Sidebar</a></li>
+                            </ul>
+                        </div>
+
+                        <a href="#">
+                            <li>Contact Us</li>
+                        </a>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+
+    </header>
+
+    <menu id="menu-sticky">
+        <div class="catagory">
+            <div class="catagory-text">
+                <i class="fa-solid fa-bars" id="three-bar"></i>
+                <h3>CATAGORIES</h3>
+            </div>
+            <div class="catagory-item-box" id="catagory-box">
+                <ul class="catagory-ul">
+                    <a href="#">
+                        <li>New Arrivals</li><i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                    <a href="#">
+                        <li>Best Selling</li><i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                    <a href="#">
+                        <li>Accessories</li>
+                    </a>
+                    <a href="#">
+                        <li>TOP 100 OFFER</li>
+                    </a>
+                    <a href="#">
+                        <li>Sunglass</li>
+                    </a>
+                    <a href="#">
+                        <li>Watch</li>
+                    </a>
+                    <a href="#">
+                        <li>Men's Product</li>
+                    </a>
+                    <a href="#">
+                        <li>Ladies</li>
+                    </a>
+                    <a href="#">
+                        <li>Asian Dress</li>
+                    </a>
+                    <a href="#">
+                        <li>Denim</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+
+        <div class="nevigation-div">
+            <ul class="nevigation">
+                <a class="home" href="#">
+                    <li>Home</li>
+                </a>
+                <a href="#">
+                    <li>Product</li>
+                </a>
+                <a href="#">
+                    <li>Services</li>
+                </a>
+                <div class="dropdown">
+                    <div data-bs-toggle="dropdown">
+                        <li>Shop<i class="fa-solid fa-angle-down"></i></li>
+                    </div>
+                    <ul class="dropdown-menu">
+                        <a class="dropdown-item" href="#">
+                            <li>Cart</li>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <li>Check Out</li>
+                        </a>
+                    </ul>
+                </div>
+                <a href="#">
+                    <li>Pages</li>
+                </a>
+                <div class="dropdown">
+                    <div data-bs-toggle="dropdown">
+                        <li>Blog<i class="fa-solid fa-angle-down"></i></li>
+                    </div>
+                    <ul class="dropdown-menu">
+                        <a class="dropdown-item" href="#">
+                            <li>Blog Single Slidebar</li>
+                        </a>
+                    </ul>
+                </div>
+                <a href="#">
+                    <li>Contact Us</li>
+                </a>
+            </ul>
+        </div>
+    </menu>
+
+    <section class="section-one" id="section-one">
+        <div class="text-box">
+            <h5>UP TO 50% OFF</h5>
+            <h2>Shirt For Man</h2>
+            <p>
+                Maboriosam in a nesciung eget magnae
+                dapibus disting tloctio in the find it pereri
+                odiy maboriosm.
+            </p>
+            <a href="#"><button>SHOP NOW</button></a>
+        </div>
+    </section>
+
+    <section class="section-two" id="section-two">
+        <div class="card-box">
+            <img src="./Image/section2-one.jpg" alt="">
+            <div class="text-area">
+                <p>Man's Collection</p>
+                <h2>Summer Travel <br> Collection</h2>
+                <a href="#"><button>DISCOVER NOW</button></a>
+            </div>
+        </div>
+        <div class="card-box">
+            <img src="./Image/section2-two.jpg" alt="">
+            <div class="text-area">
+                <p>Bag Collections</p>
+                <h2>Awesome Bag <br> 2020</h2>
+                <a href="#"><button>SHOP NOW</button></a>
+            </div>
+        </div>
+        <div class="card-box">
+            <img src="./Image/section2-three.jpg" alt="">
+            <div class="text-area">
+                <p>Flash Sale</p>
+                <h2>Mid Season <br> Up to 40% Off</h2>
+                <a href="#"><button>SHOP NOW</button></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-three" id="section-three">
+        <div class="trending">
+            <div>
+                <h1>Trending Item</h1>
+                <p></p>
+            </div>
+        </div>
+
+        <div class="nav-button">
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#pills-man"
+                        aria-selected="true">MAN</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-woman"
+                        aria-selected="false">WOMAN</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-kids"
+                        aria-selected="false">KIDS</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-accessories"
+                        aria-selected="false">ACCESSORIES</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-essential"
+                        aria-selected="false">ASSENTIAL</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-rich"
+                        aria-selected="false">RICHEST</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="pills-man">
+                <div class="cart-box">
+                    <div class="cart">
+                        <div class="img-div">
+                            <img class="img-Tag" src="Image/man-cart/trending-image1.jpg" alt="">
+                        </div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p class="pro-name">Men Hot Collection</p>
+                            <span>$<p class="price">29.00</p></span>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img class="img-Tag" src="Image/man-cart/trending-image2.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p class="pro-name">Men Hot Collection</p>
+                            <span>$<p class="price">9.00</p></span>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img class="img-Tag" src="Image/man-cart/trending-image3.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p class="pro-name">Men Hot Collection</p>
+                            <span>$<p class="price">12.00</p></span>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img class="img-Tag" src="Image/man-cart/trending-image4.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p class="pro-name">Men Hot Collection</p>
+                            <span>$<p class="price">23.00</p></span>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img class="img-Tag" src="Image/man-cart/trending-image5.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p class="pro-name">Men Hot Collection</p>
+                            <span>$<p class="price">15.00</p></span>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img class="img-Tag" src="Image/man-cart/trending-image6.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p class="pro-name">Men Hot Collection</p>
+                            <span>$<p class="price">18.00</p></span>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img class="img-Tag" src="Image/man-cart/trending-image7.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p class="pro-name">Men Hot Collection</p>
+                            <span>$<p class="price">16.00</p></span>
+                        </div>
+                    </div>
+                    <div class="cart">+
+                        <div class="img-div"><img class="img-Tag" src="Image/man-cart/trending-image8.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p class="pro-name">Men Hot Collection</p>
+                            <span>$<p class="price">9.00</p></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade cart-box" id="pills-woman">
+                <div class="cart-box">
+                    <div class="cart">
+                        <div class="img-div"><img class="img-Tag" src="Image/women-cart/trending-image1.jpg" alt="">
+                        </div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p class="pro-name">Women Hot Collection</p>
+                            <span>$<p class="price">9.00</p></span>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img class="img-Tag" src="Image/women-cart/trending-image2.jpg" alt="">
+                        </div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p class="pro-name">Women Hot Collection</p>
+                            <span>$<p class="price">13.00</p></span>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img class="img-Tag" src="Image/women-cart/trending-image3.jpg" alt="">
+                        </div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p class="pro-name">Women Hot Collection</p>
+                            <span>$<p class="price">11.00</p></span>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img class="img-Tag" src="Image/women-cart/trending-image4.jpg" alt="">
+                        </div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p class="pro-name">Women Hot Collection</p>
+                            <span>$<p class="price">15.00</p></span>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img class="img-Tag" src="Image/women-cart/trending-image5.jpg" alt="">
+                        </div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p class="pro-name">Women Hot Collection</p>
+                            <span>$<p class="price">5.00</p></span>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img class="img-Tag" src="Image/women-cart/trending-image6.jpg" alt="">
+                        </div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p class="pro-name">Women Hot Collection</p>
+                            <span>$<p class="price">11.00</p></span>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img class="img-Tag" src="Image/women-cart/trending-image7.jpg" alt="">
+                        </div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p class="pro-name">Women Hot Collection</p>
+                            <span>$<p class="price">6.00</p></span>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img class="img-Tag" src="Image/women-cart/trending-image8.jpg" alt="">
+                        </div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p class="pro-name">Women Hot Collection</p>
+                            <span>$<p class="price">5.00</p></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade cart-box" id="pills-kids">
+                <div class="cart-box">
+                    <div class="cart">
+                        <div class="img-div"><img src="Image/man-cart/trending-image1.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p>Men Hot Collection</p>
+                            <p class="price">55555555555$29.00</p>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img src="Image/man-cart/trending-image2.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p>Men Hot Collection</p>
+                            <p>$29.00</p>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img src="Image/man-cart/trending-image3.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p>Men Hot Collection</p>
+                            <p>$29.00</p>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img src="Image/man-cart/trending-image4.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p>Men Hot Collection</p>
+                            <p>$29.00</p>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img src="Image/man-cart/trending-image5.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p>Men Hot Collection</p>
+                            <p>$29.00</p>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img src="Image/man-cart/trending-image6.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p>Men Hot Collection</p>
+                            <p>$29.00</p>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img src="Image/man-cart/trending-image7.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p>Men Hot Collection</p>
+                            <p>$29.00</p>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img src="Image/man-cart/trending-image8.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p>Men Hot Collection</p>
+                            <p>$29.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade cart-box" id="pills-accessories">
+                <div class="cart-box">
+                    <div class="cart">
+                        <div class="img-div"><img src="Image/man-cart/trending-image1.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p>Men Hot Collection</p>
+                            <p class="price">55555555555$29.00</p>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img src="Image/man-cart/trending-image2.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p>Men Hot Collection</p>
+                            <p>$29.00</p>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img src="Image/man-cart/trending-image3.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p>Men Hot Collection</p>
+                            <p>$29.00</p>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img src="Image/man-cart/trending-image4.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p>Men Hot Collection</p>
+                            <p>$29.00</p>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img src="Image/man-cart/trending-image5.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p>Men Hot Collection</p>
+                            <p>$29.00</p>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img src="Image/man-cart/trending-image6.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p>Men Hot Collection</p>
+                            <p>$29.00</p>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img src="Image/man-cart/trending-image7.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p>Men Hot Collection</p>
+                            <p>$29.00</p>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img src="Image/man-cart/trending-image8.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p>Men Hot Collection</p>
+                            <p>$29.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade cart-box" id="pills-essential">
+                <div class="cart-box">
+                    <div class="cart">
+                        <div class="img-div"><img src="Image/man-cart/trending-image1.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p>Men Hot Collection</p>
+                            <p class="price">55555555555$29.00</p>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img src="Image/man-cart/trending-image2.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p>Men Hot Collection</p>
+                            <p>$29.00</p>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img src="Image/man-cart/trending-image3.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p>Men Hot Collection</p>
+                            <p>$29.00</p>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img src="Image/man-cart/trending-image4.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p>Men Hot Collection</p>
+                            <p>$29.00</p>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img src="Image/man-cart/trending-image5.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p>Men Hot Collection</p>
+                            <p>$29.00</p>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img src="Image/man-cart/trending-image6.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p>Men Hot Collection</p>
+                            <p>$29.00</p>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img src="Image/man-cart/trending-image7.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p>Men Hot Collection</p>
+                            <p>$29.00</p>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img src="Image/man-cart/trending-image8.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p>Men Hot Collection</p>
+                            <p>$29.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade cart-box" id="pills-rich">
+                <div class="cart-box">
+                    <div class="cart">
+                        <div class="img-div"><img src="Image/man-cart/trending-image1.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p>Men Hot Collection</p>
+                            <p class="price">55555555555$29.00</p>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img src="Image/man-cart/trending-image2.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p>Men Hot Collection</p>
+                            <p>$29.00</p>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img src="Image/man-cart/trending-image3.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p>Men Hot Collection</p>
+                            <p>$29.00</p>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img src="Image/man-cart/trending-image4.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p>Men Hot Collection</p>
+                            <p>$29.00</p>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img src="Image/man-cart/trending-image5.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p>Men Hot Collection</p>
+                            <p>$29.00</p>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img src="Image/man-cart/trending-image6.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p>Men Hot Collection</p>
+                            <p>$29.00</p>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img src="Image/man-cart/trending-image7.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p>Men Hot Collection</p>
+                            <p>$29.00</p>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <div class="img-div"><img src="Image/man-cart/trending-image8.jpg" alt=""></div>
+                        <div class="cart-text">
+                            <p>ADD TO CART</p>
+                            <span>
+                                <i class="fa-solid fa-cart-arrow-down"></i>
+                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                <a href="#"><i class="fa-solid fa-chart-simple"></i></a>
+                            </span>
+                        </div>
+                        <div class="price-div">
+                            <p>Men Hot Collection</p>
+                            <p>$29.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-four" id="section-four">
+        <div class="eshop-text">
+            <p>Eshop Free Lite Version</p>
+            <h1>Currently You Are Using Free <br> Lite Version Of Eshop.</h1>
+            <p class="license">
+                Please, purchase full version of the template to get all pages, <br>
+                features and commercial license.
+            </p>
+            <div><a class="purchase" href="#">Purchase Now</a></div>
+        </div>
+    </section>
+
+    <section class="section-five" id="section-five">
+        <div class="under-section-five">
+            <div class="onSale">
+                <div class="header">
+                    <h2>On Sale</h2>
+                    <p></p>
+                </div>
+
+                <div class="all-box">
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="Image/On-sale/image1.jpg" alt="">
+                            <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                        </div>
+                        <div class="text-box">
+                            <a href="#">Best product in our website</a>
+                            <p>$30</p>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="Image/On-sale/image2.jpg" alt="">
+                            <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                        </div>
+                        <div class="text-box">
+                            <a href="#">Best product in our website</a>
+                            <p>$30</p>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="Image/On-sale/image3.jpg" alt="">
+                            <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                        </div>
+                        <div class="text-box">
+                            <a href="#">Best product in our website</a>
+                            <p>$30</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="onSale">
+                <div class="header">
+                    <h2>Best Sale</h2>
+                    <p></p>
+                </div>
+
+                <div class="all-box">
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="Image/Best-sale/image1.jpg" alt="">
+                            <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                        </div>
+                        <div class="text-box">
+                            <a href="#">Best product in our website</a>
+                            <p>$30</p>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="Image/Best-sale/image2.jpg" alt="">
+                            <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                        </div>
+                        <div class="text-box">
+                            <a href="#">Best product in our website</a>
+                            <p>$30</p>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="Image/Best-sale/image3.jpg" alt="">
+                            <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                        </div>
+                        <div class="text-box">
+                            <a href="#">Best product in our website</a>
+                            <p>$30</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="onSale">
+                <div class="header">
+                    <h2>Top Viewd</h2>
+                    <p></p>
+                </div>
+
+                <div class="all-box">
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="Image/Top-viewd/image1.jpg" alt="">
+                            <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                        </div>
+                        <div class="text-box">
+                            <a href="#">Best product in our website</a>
+                            <p>$30</p>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="Image/Top-viewd/image2.jpg" alt="">
+                            <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                        </div>
+                        <div class="text-box">
+                            <a href="#">Best product in our website</a>
+                            <p>$30</p>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="img-box">
+                            <img src="Image/Top-viewd/image3.jpg" alt="">
+                            <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                        </div>
+                        <div class="text-box">
+                            <a href="#">Best product in our website</a>
+                            <p>$30</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-six" id="section-six">
+        <div class="all-item">
+            <div class="d-flex justify-content-center">
+                <div class="blog-div">
+                    <h2>From Our Blog</h2>
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="blog-boxes">
+                <div class="blog-box">
+                    <img src="Image/under-blog/blog1.jpg" alt="">
+                    <div class="text-area">
+                        <p>22 July , 2020. Monday</p>
+                        <h5>Sed adipiscing ornare.</h5>
+                        <a href="#">Continue Reading</a>
+                    </div>
+                </div>
+
+                <div class="blog-box">
+                    <img src="Image/under-blog/blog2.jpg" alt="">
+                    <div class="text-area">
+                        <p>22 July , 2020. Monday</p>
+                        <h5>Man’s Fashion Winter Sale</h5>
+                        <a href="#">Continue Reading</a>
+                    </div>
+                </div>
+
+                <div class="blog-box">
+                    <img src="Image/under-blog/blog3.jpg" alt="">
+                    <div class="text-area">
+                        <p>22 July , 2020. Monday</p>
+                        <h5>Woman Fashion Festivel</h5>
+                        <a href="#">Continue Reading</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-seven" id="section-seven">
+        <div class="first-part">
+            <div class="icon-bar">
+                <div class="icon-box">
+                    <i class="fa-solid fa-rocket"></i>
+                    <span>
+                        <h4>FREE SHIPING</h4>
+                        <p>Orders over $100</p>
+                    </span>
+                </div>
+
+                <div class="icon-box">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                    <span>
+                        <h4>FREE RETURN</h4>
+                        <p>Within 30 days returns</p>
+                    </span>
+                </div>
+
+                <div class="icon-box">
+                    <i class="fa-solid fa-lock"></i>
+                    <span>
+                        <h4>SUCURE PAYMENT</h4>
+                        <p>100% secure payment</p>
+                    </span>
+                </div>
+
+                <div class="icon-box">
+                    <i class="fa-solid fa-trophy"></i>
+                    <span>
+                        <h4>BEST PEICE</h4>
+                        <p>Guaranteed price</p>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="second-bar">
+            <h4>NEWSLETTER</h4>
+            <p>Subscribe to our newsletter and get 10% off your first purchase</p>
+
+            <div class="d-flex justify-content-center">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Email">
+                    <span class="input-group-text">SUBSCRIBE</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="fotter-boxes">
+            <div class="fotter-boxes-div">
+                <div class="footer-box">
+                    <img src="./Image/eshop-logo2.png" alt="">
+                    <p>
+                        Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue, magna eros eu erat.
+                        Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+                    </p>
+                    <p>Got Question? Call us 24/7</p>
+                    <p>+0123 456 789</p>
+                </div>
+
+                <div class="footer-box">
+                    <h4>Information</h4>
+                    <ul class="footer-ul">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Haq</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Help</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-box">
+                    <h4>Customer Service</h4>
+                    <ul class="footer-ul">
+                        <li><a href="#">Payment Methods</a></li>
+                        <li><a href="#">Money-back</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-box">
+                    <h4>Get In Tuch</h4>
+                    <ul class="footer-ul">
+                        <li><a href="#">NO. 342 - London Oxford Street.</a></li>
+                        <li><a href="#">012 United Kingdom.</a></li>
+                        <li><a href="#">info@eshop.com</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">+032 3456 7890</a></li>
+                    </ul>
+                    <span>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-messenger"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center all-payment">
+            <div class="payment-box">
+                <hr>
+                <div class="d-flex justify-content-between my-class">
+                    <p>Copyright © 2020 Wpthemesgrid - All Rights Reserved.</p>
+                    <span>
+                        <a href="#"><img src="Image/payments.png" alt=""></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="eshop.js"></script>
+</body>
+
+</html>

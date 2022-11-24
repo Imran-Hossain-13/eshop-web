@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+$color: rgb(248, 150, 38);
+
+.spinner-div{
+    transform: translateY(40vh);
+    display: flex;
+    // display: none;
+    justify-content: center;
+    align-items: center;
+    .spinner-grow{
+        background-color: $color;
+        width: 80px!important;
+        height: 80px!important;
+    }
+}
+
+
+@import 'component/header';
+@import 'component/section-one';
+@import 'component/section-two';
+@import 'component/section-three';
+@import 'component/section-four';
+@import 'component/section-five';
+@import 'component/section-six';
+@import 'component/section-seven';
+@import 'component/footer';
